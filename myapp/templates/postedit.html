@@ -1,0 +1,45 @@
+{% load static %}
+{% include 'header.html' %}
+<header class="masthead" style="background-image: url('https://img.freepik.com/free-photo/toy-bricks-table-with-word-blog_144627-47465.jpg?w=996&t=st=1659006344~exp=1659006944~hmac=6954b4d184b2ac93dde9ee1579731d58cdcec32f8f2ccff5ffc643c7e872418b')">
+            <div class="container position-relative px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-md-10 col-lg-8 col-xl-7">
+                        <div class="site-heading">
+                            <h1>Blog Post</h1>
+                            <span class="subheading">A Blog Theme by Apna blog</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+<div class="row">
+	<div class="col-sm-2"></div>
+	<div class="col-sm-8">
+		<h3 class="text-center">Update Post</h3>
+                        <form action="" method="post">{% csrf_token %}
+                            {{form.as_p}}
+                        
+		               <button class="btn btn-primary text-uppercase " id="submitButton" type="submit">Update</button>
+                       <a href="/" class="btn btn-success">Back</a>
+                        </form>      
+	
+	</div>
+	<div class="col-sm-2"></div>
+	
+</div>
+
+<br>
+
+
+
+
+
+{% include 'footer.html' %}   
+
+<!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="{% static 'js/scripts.js' %}"></script>
+    </body>
+</html>   
